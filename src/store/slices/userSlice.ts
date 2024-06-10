@@ -33,13 +33,16 @@ const userSlice = createSlice({
         },
       )
   },
+  // ---------------
+  // We can use selectors like this if we dont use redux vite template or just delete selectors rules
+  // ---------------
   //selectors: {
   //  selectUser: state => state.user,
   //  selectToken: state => state.token,
   //},
 })
 
-// TODO: check is there a better practice to make selectors
+// Common practice with selectors
 export const selectUser = (state: RootState) => state.auth.user
 export const selectToken = (state: RootState) => state.auth.token
 

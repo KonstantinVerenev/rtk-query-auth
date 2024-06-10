@@ -26,7 +26,6 @@ export const userApi = api.injectEndpoints({
     }),
     getUserByToken: builder.query<Admin, void>({
       query: () => "admins/me?expand=shop,shop.settings.template",
-      //mode: "no-cors", // TODO: check backend CORs settings
     }),
   }),
 })

@@ -6,14 +6,5 @@ export default defineConfig({
   plugins: [react()],
   server: {
     open: true,
-    proxy: {
-      "*": "https://localhost:4000",
-    },
-  },
-  test: {
-    globals: true,
-    environment: "jsdom",
-    setupFiles: "src/setupTests",
-    mockReset: true,
   },
 })
