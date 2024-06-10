@@ -19,10 +19,14 @@ export const userApi = api.injectEndpoints({
         method: "POST",
         body: loginData,
       }),
+      // ---------------
+      // 2 way to handle errors - base query error transform
+      // ---------------
       //transformErrorResponse: response => {
-      //  console.log("response: ", response)
+      //  alert("response: ", response)
       //  return response
       //},
+      // ---------------
     }),
     getUserByToken: builder.query<Admin, void>({
       query: () => "admins/me?expand=shop,shop.settings.template",

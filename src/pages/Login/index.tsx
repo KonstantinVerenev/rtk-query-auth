@@ -15,7 +15,11 @@ export const Login: React.FC = () => {
     const loginResp = await login(loginData)
 
     if (loginResp.error) {
-      console.log("Error")
+      // ---------------
+      // 1 way to handle errors - response result check
+      // ---------------
+      // alert("Error")
+      // ---------------
       return
     }
 

@@ -10,6 +10,11 @@ export const store = configureStore({
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware().concat(api.middleware),
+  // ---------------
+  // 3 way to handle errors - macro level logger
+  // ---------------
+  // getDefaultMiddleware().concat(api.middleware).concat(errorLogger),
+  // ---------------
 })
 
 export type AppStore = typeof store
